@@ -12,3 +12,8 @@ else:
 
 #Back to sequential
 print('This always happens since it is not indented.')
+
+age = 17
+movie = 'r'
+if (age < 17 and age > 10 and movie == 'r'):
+    print('age below 17.')
