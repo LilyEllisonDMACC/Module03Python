@@ -5,28 +5,7 @@ Last date modified: 01/28/2023
 
 The purpose of this program is to ask for the user to sign up for Programmer's Toolkit Monthly Subscription Box and have
 them select their level of membership and print out their selection and the cost.
-
 """
-
-
-"""
-Each month is something different, t-shirts, stickers, figurines, even programming books!
-The levels are the following:
-
-    Platinum
-    Gold
-    Silver
-    Bronze
-    Free Trial
-
-Platinum is $60, each level below is 10 dollars cheaper, and the free trial is free. Write a program that uses a
-selection statement, getting user's input for a level and printing the cost for that level.
-Submit your .py file.
-As an example, after it describes the Subscription box levels, it then says "which level would you like to try?" if I
-enter "silver" or something equating to level silver - it should say something like "Silver is $40 a month. Thanks for
-selecting that"
-"""
-
 #setting constant variables to do calculations to make print commands easier to adjust to the levels
 BASE_FEE = 10 #pricing starts at $10
 ADJUST = 1 #since the first selection is free and I started numbering at 1, I had to subtract 1 from the selection to
@@ -71,3 +50,42 @@ if(userInput == '1' or userInput == '2' or userInput == '3' or userInput == '4' 
 
 else: #else statement selects all numbers outside the 1 - 5 range and all non-number entries
     print("Invalid entry.")
+
+"""
+Testing:
+Input: 1
+Expected Output: "You have selected the Free Trial level! There is no cost for this level."
+Actual Output: "You have selected the Free Trial level! There is no cost for this level."
+
+Input: 2
+Expected Output: "You have selected the Bronze level! Bronze is $10 per month."
+Actual Output: "You have selected the Bronze level! Bronze is $10 per month."
+
+Input: 3
+Expected Output: "You have selected the Silver level! Silver is $20 per month."
+Actual Output: "You have selected the Silver level! Silver is $20 per month."
+
+Input: 4
+Expected Output: "You have selected the Gold level! Gold is $30 per month."
+Actual Output: "You have selected the Gold level! Gold is $30 per month."
+
+Input: 5
+Expected Output: "You have selected the Platinum level! Platinum is $40 per month."
+Actual Output: "You have selected the Platinum level! Platinum is $40 per month."
+
+Input: 6
+Expected Output: "Invalid entry."
+Actual Output: "Invalid entry."
+
+Input: 0
+Expected Output: "Invalid entry."
+Actual Output: "Invalid entry."
+
+Input: 11
+Expected Output: "Invalid entry."
+Actual Output: "Invalid entry."
+
+Input: x
+Expected Output: "Invalid entry."
+Actual Output: "Invalid entry."
+"""
